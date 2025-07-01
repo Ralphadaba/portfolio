@@ -1,9 +1,11 @@
 "use client";
 
 import { navItems } from "@/data";
+import dynamic from "next/dynamic";
 
 import Hero from "@/components/Hero";
-import Grid from "@/components/Grid";
+// import Grid from "@/components/Grid";
+const Grid = dynamic(() => import("@/components/Grid"), { ssr: false });
 import Footer from "@/components/Footer";
 // import Clients from "@/components/Clients";
 import Approach from "@/components/Approach";
@@ -21,7 +23,7 @@ const Home = () => {
         <RecentProjects />
         {/* <Clients /> */}
         <Experience />
-        <Approach /> 
+        <Approach />
         <Footer />
       </div>
     </main>
