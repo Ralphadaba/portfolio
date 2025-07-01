@@ -5,7 +5,7 @@ import dynamic from "next/dynamic";
 
 import Hero from "@/components/Hero";
 // import Grid from "@/components/Grid";
-const Grid = dynamic(() => import("@/components/Grid"), { ssr: false });
+const Grid = dynamic(() => import("@/components/Grid"), { ssr: true });
 import Footer from "@/components/Footer";
 // import Clients from "@/components/Clients";
 import Approach from "@/components/Approach";
